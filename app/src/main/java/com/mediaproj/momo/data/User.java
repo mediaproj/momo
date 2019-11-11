@@ -4,18 +4,16 @@ public class User {
     private String email;
     private String profileImg;
     private String password;
-    private String nickname;
     private int age;
     private boolean gender; // T-남
     private String name;
     private Section section;
     private Genre genre;
 
-    public User(String email, String profileImg, String password, String nickname, int age, boolean gender, String name, Section section, Genre genre) {
+    public User(String email, String profileImg, String password, int age, boolean gender, String name, Section section, Genre genre) {
         this.email = email;
         this.profileImg = profileImg;
         this.password = password;
-        this.nickname = nickname;
         this.age = age;
         this.gender = gender;
         this.name = name;
@@ -35,9 +33,6 @@ public class User {
         return password;
     }
 
-    public String getNickname() {
-        return nickname;
-    }
 
     public int getAge() {
         return age;
