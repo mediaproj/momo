@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">momo</string>
+
+    <!--회원가입-->
+    <string name="enter_email">이메일을 입력하세요</string>
+    <string name="enter_password">비밀번호 입력하세요</string>
+    <string name="enter_name">이름을 입력하세요</string>
+    <string name="enter_age">나이 입력하세요</string>
+    <string name="gender">성별</string>
+    <string name="male">남성</string>
+    <string name="female">여성</string>
+    <string name="next">다음</string>
+    <string name="complete">완료</string>
+
+    <!--장르-->
+    <string name="genre">장르</string>
+    <string name="drama">드라마</string>
+    <string name="fantasy">판타지</string>
+    <string name="horror">공포</string>
+    <string name="romance">로맨스</string>
+    <string name="action">액션</string>
+    <string name="thriller">스릴러</string>
+    <string name="animation">애니메이션</string>
+    <string name="adventure">어드밴처</string>
+    <string name="mistery">미스터리</string>
+    <string name="history">사극</string>
+    <string name="sf">SF</string>
+    <string name="comedy">코미디</string>
+
+    <!--분야-->
+    <string name="section">분야</string>
+    <string name="movie">영화</string>
+    <string name="musical">뮤지컬</string>
+    <string name="show">공연</string>
+    <string name="festival">축제</string>
+
 </resources>

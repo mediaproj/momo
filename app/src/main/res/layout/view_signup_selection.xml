@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--분야-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_movie"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_green_selector"
+                android:gravity="center"
+                android:text="@string/movie" />
+
+            <TextView
+                android:id="@+id/btn_musical"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_green_selector"
+                android:gravity="center"
+                android:text="@string/musical" />
+
+            <TextView
+                android:id="@+id/btn_show"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/bg_green_selector"
+                android:text="@string/show" />
+
+            <TextView
+                android:id="@+id/btn_festival"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_green_selector"
+                android:gravity="center"
+                android:text="@string/festival" />
+
+        </LinearLayout>
+
+
+        <!--장르-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/genre" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_drama"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blue_selector"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/drama" />
+
+                <TextView
+                    android:id="@+id/btn_fantasy"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_blue_selector"
+                    android:gravity="center"
+                    android:text="@string/fantasy" />
+
+                <TextView
+                    android:id="@+id/btn_horror"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/horror" />
+
+                <TextView
+                    android:id="@+id/btn_romance"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/romance" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_action"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_blue_selector"
+                    android:gravity="center"
+                    android:text="@string/action" />
+
+                <TextView
+                    android:id="@+id/btn_thriller"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/thriller" />
+
+                <TextView
+                    android:id="@+id/btn_animation"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/animation" />
+
+                <TextView
+                    android:id="@+id/btn_adventure"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/adventure" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_mistery"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/mistery" />
+
+                <TextView
+                    android:id="@+id/btn_history"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_blue_selector"
+                    android:gravity="center"
+                    android:text="@string/history" />
+
+                <TextView
+                    android:id="@+id/btn_sf"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/sf" />
+
+                <TextView
+                    android:id="@+id/btn_comedy"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_blue_selector"
+                    android:text="@string/comedy" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/complete" />
+
+
+    </LinearLayout>
+
+</FrameLayout>
