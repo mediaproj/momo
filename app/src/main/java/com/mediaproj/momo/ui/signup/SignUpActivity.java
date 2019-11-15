@@ -6,17 +6,21 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
 import com.mediaproj.momo.R;
 import com.mediaproj.momo.data.Genre;
+import com.mediaproj.momo.data.Preference;
 import com.mediaproj.momo.data.Section;
 import com.mediaproj.momo.data.User;
+import com.mediaproj.momo.global.Retrofit.RetrofitClient;
 
 import java.util.Arrays;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -103,23 +107,33 @@ public class SignUpActivity extends AppCompatActivity {
 
     void complete() {
         setSelection();
-        createJSONObject();
+        createUser();
     }
 
     void setSelection() {
         for (int i = 0; i < SELECTION_NUM; i++)
             selected[i] = flSelection.findViewById(ids[i]).isSelected();
 
-        user.setSection(new Section(selected[0], selected[1], selected[2], selected[3]));
-        user.setGenre(new Genre(selected[4], selected[5], selected[6], selected[7],
-                selected[8], selected[9], selected[10], selected[11],
-                selected[12], selected[13], selected[14], selected[15]));
-
+        Preference preference = new Preference(new Section(selected[0], selected[1], selected[2], selected[3]),
+                new Genre(selected[4], selected[5], selected[6], selected[7],
+                        selected[8], selected[9], selected[10], selected[11],
+                        selected[12], selected[13], selected[14], selected[15]));
+        user.setPreference(preference);
     }
 
-    void createJSONObject() {
-        Gson gson = new Gson();
-        String json = gson.toJson(user);
-        Toast.makeText(this, json, Toast.LENGTH_LONG).show();
+    void createUser() {
+        Call<Void> call = RetrofitClient.getApiService().createUser(user);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                finish();
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
     }
 }

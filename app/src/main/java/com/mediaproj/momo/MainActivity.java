@@ -1,9 +1,9 @@
 package com.mediaproj.momo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mediaproj.momo.ui.signup.SignUpActivity;
 

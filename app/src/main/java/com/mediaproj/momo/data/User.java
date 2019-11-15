@@ -7,22 +7,20 @@ public class User {
     private int age;
     private boolean gender; // T-남
     private String name;
-    private Section section;
-    private Genre genre;
+    private Preference preference;
 
     public User() {
 
     }
 
-    public User(String email, String profileImg, String password, int age, boolean gender, String name, Section section, Genre genre) {
+    public User(String email, String profileImg, String password, int age, boolean gender, String name, Preference preference) {
         this.email = email;
         this.profileImg = profileImg;
         this.password = password;
         this.age = age;
         this.gender = gender;
         this.name = name;
-        this.section = section;
-        this.genre = genre;
+        this.preference = preference;
     }
 
     public String getEmail() {
@@ -73,19 +71,11 @@ public class User {
         this.name = name;
     }
 
-    public Section getSection() {
-        return section;
+    public Preference getPreference() {
+        return preference;
     }
 
-    public void setSection(Section section) {
-        this.section = section;
-    }
-
-    public Genre getGenre() {
-        return genre;
-    }
-
-    public void setGenre(Genre genre) {
-        this.genre = genre;
+    public void setPreference(Preference preference) {
+        this.preference = preference;
     }
 }
