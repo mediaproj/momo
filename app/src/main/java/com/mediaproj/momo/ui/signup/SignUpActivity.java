@@ -6,9 +6,11 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
 import com.mediaproj.momo.R;
 import com.mediaproj.momo.data.Genre;
 import com.mediaproj.momo.data.Section;
@@ -101,6 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     void complete() {
         setSelection();
+        createJSONObject();
     }
 
     void setSelection() {
@@ -112,5 +115,11 @@ public class SignUpActivity extends AppCompatActivity {
                 selected[8], selected[9], selected[10], selected[11],
                 selected[12], selected[13], selected[14], selected[15]));
 
+    }
+
+    void createJSONObject() {
+        Gson gson = new Gson();
+        String json = gson.toJson(user);
+        Toast.makeText(this, json, Toast.LENGTH_LONG).show();
     }
 }
