@@ -1,9 +1,20 @@
 <resources>
     <string name="app_name">momo</string>
 
+    <!--Common-->
+    <string name="error">알수없는 오류가 발생했습니다</string>
+
+    <!--로그인-->
+    <string name="login">로그인</string>
+    <string name="login_success">%s님 환영합니다!</string>
+    <string name="login_failed">로그인에 실패했습니다</string>
+    <string name="no_such_user">등록되지 않은 회원입니다</string>
+    <string name="wrong_user_data">로그인 정보가 일치하지 않습니다</string>
+
     <!--회원가입-->
+    <string name="signup">회원가입</string>
     <string name="enter_email">이메일을 입력하세요</string>
-    <string name="enter_password">비밀번호 입력하세요</string>
+    <string name="enter_password">비밀번호를 입력하세요</string>
     <string name="enter_name">이름을 입력하세요</string>
     <string name="enter_age">나이를 입력하세요</string>
     <string name="gender">성별</string>

@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_green_selector"
+                android:background="@drawable/bg_btn_selector"
                 android:gravity="center"
                 android:text="@string/movie"
                 android:textColor="@color/black" />
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_green_selector"
+                android:background="@drawable/bg_btn_selector"
                 android:gravity="center"
                 android:text="@string/musical"
                 android:textColor="@color/black" />
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_green_selector"
+                android:background="@drawable/bg_btn_selector"
                 android:gravity="center"
                 android:text="@string/show"
                 android:textColor="@color/black" />
@@ -67,7 +67,7 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/bg_green_selector"
+                android:background="@drawable/bg_btn_selector"
                 android:gravity="center"
                 android:text="@string/festival"
                 android:textColor="@color/black" />
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/drama"
                     android:textColor="@color/black" />
@@ -112,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/fantasy"
                     android:textColor="@color/black" />
@@ -123,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/horror"
                     android:textColor="@color/black" />
@@ -133,7 +133,7 @@
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/romance"
                     android:textColor="@color/black" />
@@ -152,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/action"
                     android:textColor="@color/black" />
@@ -163,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/thriller"
                     android:textColor="@color/black" />
@@ -174,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/animation"
                     android:textColor="@color/black" />
@@ -184,7 +184,7 @@
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/adventure"
                     android:textColor="@color/black" />
@@ -203,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/mistery"
                     android:textColor="@color/black" />
@@ -214,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/history"
                     android:textColor="@color/black" />
@@ -225,7 +225,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/sf"
                     android:textColor="@color/black" />
@@ -235,7 +235,7 @@
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_blue_selector"
+                    android:background="@drawable/bg_btn_selector"
                     android:gravity="center"
                     android:text="@string/comedy"
                     android:textColor="@color/black" />

@@ -1,5 +1,6 @@
 package com.mediaproj.momo.ui.signup;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
@@ -16,6 +17,7 @@ import com.mediaproj.momo.data.Genre;
 import com.mediaproj.momo.data.Preference;
 import com.mediaproj.momo.data.Section;
 import com.mediaproj.momo.data.User;
+import com.mediaproj.momo.global.MomoUtil;
 import com.mediaproj.momo.global.Retrofit.RetrofitClient;
 
 import java.util.Arrays;
@@ -83,6 +85,7 @@ public class SignUpActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     flSelection.findViewById(ids[finalI]).setSelected(!flSelection.findViewById(ids[finalI]).isSelected());
+                    ((TextView) flSelection.findViewById(ids[finalI])).setTextColor(flSelection.findViewById(ids[finalI]).isSelected() ? Color.WHITE : Color.BLACK);
                 }
             });
         }
@@ -135,9 +138,8 @@ public class SignUpActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                t.printStackTrace();
+                MomoUtil.showMessage(SignUpActivity.this, getString(R.string.error));
             }
         });
-
     }
 }
