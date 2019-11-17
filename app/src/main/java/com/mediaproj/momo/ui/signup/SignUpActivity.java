@@ -1,6 +1,8 @@
 package com.mediaproj.momo.ui.signup;
 
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -58,6 +60,8 @@ public class SignUpActivity extends AppCompatActivity {
         flProfile = findViewById(R.id.fl_profile);
         etEmail = flProfile.findViewById(R.id.et_email);
         etPassword = flProfile.findViewById(R.id.et_password);
+        etPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
         etName = flProfile.findViewById(R.id.et_name);
         etAge = flProfile.findViewById(R.id.et_age);
         rbMale = flProfile.findViewById(R.id.rb_male);

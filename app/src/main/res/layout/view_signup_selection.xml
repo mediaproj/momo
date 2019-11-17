@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.5" />
+
 
         <!--분야-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/section" />
+            android:layout_marginBottom="10dp"
+            android:text="@string/section"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,28 +33,34 @@
                 android:id="@+id/btn_movie"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_green_selector"
                 android:gravity="center"
-                android:text="@string/movie" />
+                android:text="@string/movie"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/btn_musical"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_green_selector"
                 android:gravity="center"
-                android:text="@string/musical" />
+                android:text="@string/musical"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/btn_show"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/bg_green_selector"
-                android:text="@string/show" />
+                android:gravity="center"
+                android:text="@string/show"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/btn_festival"
@@ -54,7 +69,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_green_selector"
                 android:gravity="center"
-                android:text="@string/festival" />
+                android:text="@string/festival"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -63,7 +79,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/genre" />
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/genre"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -79,123 +99,146 @@
                     android:id="@+id/btn_drama"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_blue_selector"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/bg_blue_selector"
                     android:gravity="center"
-                    android:text="@string/drama" />
+                    android:text="@string/drama"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_fantasy"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_blue_selector"
                     android:gravity="center"
-                    android:text="@string/fantasy" />
+                    android:text="@string/fantasy"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_horror"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/horror" />
+                    android:gravity="center"
+                    android:text="@string/horror"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_romance"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/romance" />
+                    android:gravity="center"
+                    android:text="@string/romance"
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/btn_action"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_blue_selector"
                     android:gravity="center"
-                    android:text="@string/action" />
+                    android:text="@string/action"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_thriller"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/thriller" />
+                    android:gravity="center"
+                    android:text="@string/thriller"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_animation"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/animation" />
+                    android:gravity="center"
+                    android:text="@string/animation"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_adventure"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/adventure" />
+                    android:gravity="center"
+                    android:text="@string/adventure"
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/btn_mistery"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/mistery" />
+                    android:gravity="center"
+                    android:text="@string/mistery"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_history"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_blue_selector"
                     android:gravity="center"
-                    android:text="@string/history" />
+                    android:text="@string/history"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_sf"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/sf" />
+                    android:gravity="center"
+                    android:text="@string/sf"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/btn_comedy"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@drawable/bg_blue_selector"
-                    android:text="@string/comedy" />
+                    android:gravity="center"
+                    android:text="@string/comedy"
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
@@ -211,7 +254,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/complete" />
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="15dp"
+            android:text="@string/complete"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
