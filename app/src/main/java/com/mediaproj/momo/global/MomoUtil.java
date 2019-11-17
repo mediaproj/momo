@@ -3,8 +3,6 @@ package com.mediaproj.momo.global;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.mediaproj.momo.R;
-
 public class MomoUtil {
 
     public static boolean isStringEmpty(String value) {
