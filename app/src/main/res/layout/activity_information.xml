@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_main_information_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/lightseagreen">
+        <TextView
+            android:fontFamily="@font/noto_sans_kr_bold_hestia"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:lineSpacingExtra="6sp"
+            android:text="11월 3주 차 주간 영화 5"
+            android:includeFontPadding="false"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"/>
+
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_main_information_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/rl_main_information_toolbar"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.겨울왕국2"
+        android:fontFamily="@font/noto_sans_kr_bold_hestia"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/lightseagreen"
+        android:textSize="22sp"
+        android:includeFontPadding="false"/>
+
+    <TextView
+        android:id="@+id/tv_main_information_vote_rate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/tv_main_information_title"
+        android:layout_width="252dp"
+        android:layout_height="21dp"
+        android:textSize="16sp"
+        android:textColor="#a1a1a1"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_horizontal"
+        android:text="예매율 30%"
+        />
+
+    <ImageView
+        android:background="@drawable/round_corner"
+        android:id="@+id/iv_main_information"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/rl_main_information_toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="173dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/maxresdefault" />
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="360dp" android:layout_height="96dp">
+
+        <ImageView
+            android:layout_marginStart="49dp"
+            android:id="@+id/iv_main_information_reserve"
+            android:src="@drawable/btn_genre_active"
+            android:layout_centerInParent="true"
+            android:layout_width="146dp"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:id="@+id/tv_main_information_reserve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="5sp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/noto_sans_kr_medium_hestia"
+            android:text="예약하기"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
