@@ -1,54 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-
-    <RelativeLayout
-        android:id="@+id/rl_main_toolbar"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/lightseagreen">
+        android:layout_height="70dp"
+        android:background="@color/lightseagreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/alarm"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/notice_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="92dp"
             android:fontFamily="@font/noto_sans_kr_medium_hestia"
             android:gravity="center_horizontal"
             android:includeFontPadding="false"
             android:lineSpacingExtra="6sp"
             android:text="MOMO"
-            android:textStyle="bold"
             android:textColor="#ffffff"
-            android:textSize="25sp" />
-    </RelativeLayout>
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.694"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tabbar"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/tabbar_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_main_tabbar"
         android:background="@color/lightseagreen"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <RelativeLayout
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main_recommend_img"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="200dp"/>
 
-        <ImageView
-            android:id="@+id/iv_main_page"
-            android:src="@drawable/maxresdefault"
-            android:scaleType="fitXY"
+
+        <me.relex.circleindicator.CircleIndicator2
+            android:id="@+id/rvMainMdReCoIndicator"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            />
-
-
-
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="60dp"
+            app:ci_drawable="@drawable/indicator_circle"
+            app:ci_drawable_unselected="@drawable/indicator_circle_unchecked"
+            app:ci_gravity="center"
+            app:ci_height="8dp"
+            app:ci_width="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_main_recommend_img" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_information"

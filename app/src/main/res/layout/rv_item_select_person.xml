@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+    <!--응답,미응답 구분-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:id="@+id/ll_rv_select_person"
+    android:layout_marginLeft="16dp">
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+
+                android:src="@drawable/baseline_person_black_18dp"
+                android:id="@+id/iv_rv_select_person_profile"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_weight="1" android:gravity="center_vertical"
+        >
+            <TextView
+                    android:text="name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_rv_select_person_profile_name"
+                    android:textSize="15dp"
+                    android:textStyle="bold" android:textColor="#484848"/>
+
+            <CheckBox
+                    android:layout_width="24dp"
+                    android:layout_height="20dp"
+                    android:text="Check"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="240dp"
+                    android:id="@+id/rv_checkbox"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
