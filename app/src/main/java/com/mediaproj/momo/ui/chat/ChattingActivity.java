@@ -1,5 +1,6 @@
 package com.mediaproj.momo.ui.chat;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -25,6 +26,8 @@ import com.mediaproj.momo.R;
 import com.mediaproj.momo.data.Message;
 import com.mediaproj.momo.global.FirebaseManager;
 import com.mediaproj.momo.global.MomoUtil;
+
+import im.delight.android.identicons.Identicon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -133,6 +136,7 @@ public class ChattingActivity extends AppCompatActivity {
     class ViewHolder extends RecyclerView.ViewHolder {
         Message message;
 
+        Identicon identicon;
         TextView tvName;
         TextView tvMessage;
         View leftBlank;
@@ -146,6 +150,7 @@ public class ChattingActivity extends AppCompatActivity {
             leftBlank = itemView.findViewById(R.id.blank_left);
             rightBlank = itemView.findViewById(R.id.blank_right);
             messageBlank = itemView.findViewById(R.id.blank_message);
+            identicon = itemView.findViewById(R.id.identicon);
         }
 
         void setItem(Message message) {
@@ -157,16 +162,19 @@ public class ChattingActivity extends AppCompatActivity {
             if (isMyMessage(message.getName())) {
                 rightBlank.setVisibility(View.GONE);
                 leftBlank.setVisibility(View.VISIBLE);
-                tvName.setGravity(Gravity.RIGHT);
+                tvName.setVisibility(View.GONE);
                 messageBlank.setVisibility(View.VISIBLE);
+                identicon.setVisibility(View.GONE);
             } else {
                 rightBlank.setVisibility(View.VISIBLE);
                 leftBlank.setVisibility(View.GONE);
+                tvName.setVisibility(View.VISIBLE);
                 tvName.setGravity(Gravity.LEFT);
+                tvName.setText(message.getName());
                 messageBlank.setVisibility(View.GONE);
+                identicon.setVisibility(View.VISIBLE);
+                identicon.show(message.getName());
             }
-
-            tvName.setText(message.getName());
             tvMessage.setText(message.getText());
         }
     }
