@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,7 +16,7 @@ import com.mediaproj.momo.data.LoginData;
 import com.mediaproj.momo.data.UserData;
 import com.mediaproj.momo.global.MomoUtil;
 import com.mediaproj.momo.global.Retrofit.RetrofitClient;
-import com.mediaproj.momo.ui.main.MainActivity;
+import com.mediaproj.momo.ui.chat.RoomActivity;
 import com.mediaproj.momo.ui.signup.SignUpActivity;
 
 import retrofit2.Call;
@@ -67,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<UserData>() {
             @Override
             public void onResponse(Call<UserData> call, Response<UserData> response) {
-
                 UserData userData = response.body();
 
                 if (userData == null)
@@ -96,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
         MomoUtil.setUserData(userData);
         Toast.makeText(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()), Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, RoomActivity.class);
         startActivity(intent);
 
         finish();

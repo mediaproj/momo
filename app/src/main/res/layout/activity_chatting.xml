@@ -6,7 +6,18 @@
     android:background="#EFEFF1"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.ChattingActivity">
+    tools:context=".ui.chat.ChattingActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/view_recycler"

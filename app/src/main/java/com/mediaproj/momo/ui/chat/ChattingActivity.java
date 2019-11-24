@@ -1,8 +1,4 @@
-package com.mediaproj.momo.ui;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
+package com.mediaproj.momo.ui.chat;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,8 +9,21 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.mediaproj.momo.R;
 import com.mediaproj.momo.data.Message;
+import com.mediaproj.momo.global.FirebaseManager;
 import com.mediaproj.momo.global.MomoUtil;
 
 import java.util.ArrayList;
@@ -23,6 +32,9 @@ import java.util.List;
 public class ChattingActivity extends AppCompatActivity {
 
     List<Message> messageList;
+
+    String roomId;
+    String roomTitle;
 
     Adapter adapter;
     RecyclerView recyclerView;
@@ -34,6 +46,10 @@ public class ChattingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatting);
+
+        roomId = getIntent().getStringExtra("id");
+        roomTitle = getIntent().getStringExtra("title");
+        ((TextView) findViewById(R.id.tv_title)).setText(roomTitle);
 
         messageList = new ArrayList<>();
         adapter = new Adapter(messageList);
@@ -47,10 +63,40 @@ public class ChattingActivity extends AppCompatActivity {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 메시지 작성
+                String text = etMessage.getText().toString().trim();
+                if (!MomoUtil.isStringEmpty(text))
+                    sendMessage(text);
             }
         });
 
+        listen();
+    }
+
+    void listen() {
+        FirebaseManager.getInstance().messagesRef.whereEqualTo("roomId", roomId).orderBy("time", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                if (e != null)
+                    return;
+                messageList.clear();
+                for (QueryDocumentSnapshot doc : queryDocumentSnapshots) {
+                    Message message = doc.toObject(Message.class);
+                    messageList.add(message);
+                }
+                adapter.notifyDataSetChanged();
+                recyclerView.smoothScrollToPosition(adapter.getItemCount());
+            }
+        });
+    }
+
+    void sendMessage(String text) {
+        Message message = new Message(roomId, MomoUtil.getUserData().getName(), text, System.currentTimeMillis());
+        FirebaseManager.getInstance().messagesRef.add(message).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                etMessage.setText("");
+            }
+        });
     }
 
     boolean isMyMessage(String name) {

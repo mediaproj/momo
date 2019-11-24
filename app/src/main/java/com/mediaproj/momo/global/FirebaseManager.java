@@ -6,11 +6,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class FirebaseManager {
     private static FirebaseManager instance = new FirebaseManager();
     public FirebaseFirestore db;
-    public CollectionReference roomsRef;
+    public CollectionReference messagesRef;
 
     private FirebaseManager() {
         db = FirebaseFirestore.getInstance();
-        roomsRef = db.collection("rooms");
+        messagesRef = db.collection("messages");
     }
 
     public static FirebaseManager getInstance() {

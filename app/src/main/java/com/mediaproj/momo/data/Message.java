@@ -1,10 +1,28 @@
 package com.mediaproj.momo.data;
 
 public class Message {
-
+    String roomId;
     String name;
     String text;
     Long time;
+
+    public Message() {
+    }
+
+    public Message(String roomId, String name, String text, Long time) {
+        this.roomId = roomId;
+        this.name = name;
+        this.text = text;
+        this.time = time;
+    }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
 
     public String getName() {
         return name;

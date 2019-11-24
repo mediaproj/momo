@@ -17,12 +17,12 @@ public class MomoUtil {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
-    public static void setUserData(UserData userData) {
-        ud = userData;
-    }
-
     public static UserData getUserData() {
         return ud;
+    }
+
+    public static void setUserData(UserData userData) {
+        ud = userData;
     }
 
 
