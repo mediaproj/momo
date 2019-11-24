@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
 
     void onLoginSuccess(UserData userData) {
         MomoUtil.setUserData(userData);
-        Toast.makeText(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()), Toast.LENGTH_SHORT).show();
+        MomoUtil.showMessage(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()));
 
         Intent intent = new Intent(LoginActivity.this, RoomActivity.class);
         startActivity(intent);

@@ -3,12 +3,12 @@ package com.mediaproj.momo.data;
 public class Room {
     String id;
     String title;
-    boolean enabled;
+    boolean enable;
 
-    public Room(String id, String title, boolean enabled) {
+    public Room(String id, String title, boolean enable) {
         this.id = id;
         this.title = title;
-        this.enabled = enabled;
+        this.enable = enable;
     }
 
     public String getId() {
@@ -27,11 +27,11 @@ public class Room {
         this.title = title;
     }
 
-    public boolean isEnabled() {
-        return enabled;
+    public boolean isEnable() {
+        return enable;
     }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setEnable(boolean enable) {
+        this.enable = enable;
     }
 }

@@ -15,9 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mediaproj.momo.R;
 import com.mediaproj.momo.data.Room;
 import com.mediaproj.momo.global.MomoUtil;
+import com.mediaproj.momo.global.Retrofit.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RoomActivity extends AppCompatActivity {
 
@@ -36,15 +41,25 @@ public class RoomActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.view_recycler);
         recyclerView.setAdapter(adapter);
 
-        example();
+        getRoomList();
     }
 
-    void example() {
-        Room ex1 = new Room("abcd", "채팅방 예시1", false);
-        roomList.add(ex1);
+    void getRoomList() {
+        Call<List<Room>> call = RetrofitClient.getApiService().getUserSchedule(MomoUtil.getUserData().getEmail());
+        call.enqueue(new Callback<List<Room>>() {
+            @Override
+            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
+                roomList.clear();
+                if (response.body() != null)
+                    roomList.addAll(response.body());
+                adapter.notifyDataSetChanged();
+            }
 
-        Room ex2 = new Room("abcdefg", "채팅방 예시2", true);
-        roomList.add(ex2);
+            @Override
+            public void onFailure(Call<List<Room>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
     }
 
     void openChattingRoom(Room room) {
@@ -95,7 +110,7 @@ public class RoomActivity extends AppCompatActivity {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (room.isEnabled())
+                    if (room.isEnable())
                         openChattingRoom(room);
                     else
                         MomoUtil.showMessage(RoomActivity.this, getString(R.string.disabled_chat));
@@ -110,8 +125,8 @@ public class RoomActivity extends AppCompatActivity {
 
         void setUi() {
             tvTitle.setText(room.getTitle());
-            tvEnabled.setText(room.isEnabled() ? getString(R.string.enabled) : getString(R.string.disabled));
-            tvEnabled.setTextColor(room.isEnabled() ? Color.BLUE : Color.RED);
+            tvEnabled.setText(room.isEnable() ? getString(R.string.enabled) : getString(R.string.disabled));
+            tvEnabled.setTextColor(room.isEnable() ? Color.BLUE : Color.RED);
         }
     }
 }
