@@ -64,27 +64,6 @@
         android:layout_height="50dp"/>
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_main_recommend_img"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-
-
-        <me.relex.circleindicator.CircleIndicator2
-            android:id="@+id/rvMainMdReCoIndicator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="60dp"
-            app:ci_drawable="@drawable/indicator_circle"
-            app:ci_drawable_unselected="@drawable/indicator_circle_unchecked"
-            app:ci_gravity="center"
-            app:ci_height="8dp"
-            app:ci_width="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_main_recommend_img" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_information"

@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.mediaproj.momo.R
 import com.mediaproj.momo.data.MainImgData
 
-class MainRecommendRecyclerViewAdapter (val ctx: Context, val dataList: ArrayList<MainImgData>):
+class MainRecommendRecyclerViewAdapter(val ctx: Context?, val dataList: ArrayList<MainImgData>):
     RecyclerView.Adapter<MainRecommendRecyclerViewAdapter.Holder>() {
 
     override fun getItemCount(): Int = dataList.size
@@ -18,16 +18,18 @@ class MainRecommendRecyclerViewAdapter (val ctx: Context, val dataList: ArrayLis
     override fun onCreateViewHolder(
         viewGroup: ViewGroup,
         viewType: Int
-    ): MainRecommendRecyclerViewAdapter.Holder {
+    ): Holder {
         val view: View = LayoutInflater.from(ctx).inflate(R.layout.rv_item_main_recommend, viewGroup, false)
 
         return Holder(view)
     }
 
-    override fun onBindViewHolder(holder: MainRecommendRecyclerViewAdapter.Holder, position: Int) {
-        Glide.with(ctx)
-            .load(dataList[position].mainImg)
-            .into(holder.mainImg)
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+        ctx?.let {
+            Glide.with(it)
+                .load(dataList[position].mainImg)
+                .into(holder.mainImg)
+        }
 
     }
 
