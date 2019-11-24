@@ -10,7 +10,7 @@
 
 
     <ImageView
-        android:background="@drawable/background_rounding"
+
         android:id="@+id/iv_main_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

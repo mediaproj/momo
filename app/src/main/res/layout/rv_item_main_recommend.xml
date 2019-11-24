@@ -6,7 +6,8 @@
     <ImageView
         android:id="@+id/iv_main_recommend"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:src="@drawable/maxresdefault"
+        android:scaleType="fitXY"
          />
 </LinearLayout>

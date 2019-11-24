@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_view">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/ll_rv_item_episode_overview_container"
+    android:layout_marginLeft="16dp">
+        <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/baseline_person_black_18dp"
+                android:id="@+id/iv_rv_notice_profile"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_weight="1" android:gravity="center_vertical">
+            <TextView
+                    android:text="요청/응답 메세지가 도착했습니다."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_rv_notice_main"
+                    android:textSize="15dp"
+                    android:textStyle="bold" android:textColor="#484848"/>
+
+            <TextView
+                    android:text="생성날짜"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_rv_notice_date"
+                    android:textSize="12dp"
+                    android:layout_gravity="right"
+                    android:textColor="#cecece"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -6,7 +6,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main_recommend_img"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="250dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+<!--        android:layout_height="200dp"/>-->
+<!--<ImageView-->
+<!--    android:id="@+id/iv_main_recommend"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="200dp"-->
+<!--    android:src="@drawable/maxresdefault"-->
+<!--    android:scaleType="fitXY"-->
+<!--    />-->
+
 
 
     <me.relex.circleindicator.CircleIndicator2
@@ -20,7 +31,7 @@
         app:ci_gravity="center"
         app:ci_height="8dp"
         app:ci_width="8dp"
-        android:layout_below="@+id/rv_main_recommend_img"
+        android:layout_below="@+id/iv_main_recommend"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +39,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main_movie"
+        android:layout_marginTop="80dp"
+android:background="@drawable/background_rounding"
+        android:layout_below="@+id/rv_main_recommend_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
