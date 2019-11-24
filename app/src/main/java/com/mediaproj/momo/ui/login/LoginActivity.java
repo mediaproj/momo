@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import com.mediaproj.momo.data.LoginData;
 import com.mediaproj.momo.data.UserData;
 import com.mediaproj.momo.global.MomoUtil;
 import com.mediaproj.momo.global.Retrofit.RetrofitClient;
+import com.mediaproj.momo.ui.main.MainActivity;
 import com.mediaproj.momo.ui.signup.SignUpActivity;
 
 import retrofit2.Call;
@@ -72,10 +74,8 @@ public class LoginActivity extends AppCompatActivity {
                     MomoUtil.showMessage(LoginActivity.this, getString(R.string.no_such_user));
                 else if (!userData.isLogined())
                     Toast.makeText(LoginActivity.this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show();
-                else {
-                    Toast.makeText(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()), Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                else
+                    onLoginSuccess(userData);
             }
 
             @Override
@@ -90,5 +90,15 @@ public class LoginActivity extends AppCompatActivity {
         etPassword.setText("");
         Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
         startActivity(intent);
+    }
+
+    void onLoginSuccess(UserData userData) {
+        MomoUtil.setUserData(userData);
+        Toast.makeText(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()), Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+
+        finish();
     }
 }
