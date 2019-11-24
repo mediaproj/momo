@@ -16,6 +16,7 @@ import com.mediaproj.momo.data.LoginData;
 import com.mediaproj.momo.data.UserData;
 import com.mediaproj.momo.global.MomoUtil;
 import com.mediaproj.momo.global.Retrofit.RetrofitClient;
+import com.mediaproj.momo.ui.chat.RoomActivity;
 import com.mediaproj.momo.ui.signup.SignUpActivity;
 
 import retrofit2.Call;
@@ -65,17 +66,14 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<UserData>() {
             @Override
             public void onResponse(Call<UserData> call, Response<UserData> response) {
-
                 UserData userData = response.body();
 
                 if (userData == null)
                     MomoUtil.showMessage(LoginActivity.this, getString(R.string.no_such_user));
                 else if (!userData.isLogined())
                     Toast.makeText(LoginActivity.this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show();
-                else {
-                    Toast.makeText(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()), Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                else
+                    onLoginSuccess(userData);
             }
 
             @Override
@@ -90,5 +88,15 @@ public class LoginActivity extends AppCompatActivity {
         etPassword.setText("");
         Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
         startActivity(intent);
+    }
+
+    void onLoginSuccess(UserData userData) {
+        MomoUtil.setUserData(userData);
+        MomoUtil.showMessage(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()));
+
+        Intent intent = new Intent(LoginActivity.this, RoomActivity.class);
+        startActivity(intent);
+
+        finish();
     }
 }
