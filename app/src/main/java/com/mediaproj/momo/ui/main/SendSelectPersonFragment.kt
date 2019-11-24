@@ -39,47 +39,47 @@ class SendSelectPersonFragment : Fragment() {
         var selectDataList: ArrayList<PersonSelectData> = ArrayList()
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",true)
+                "lee",true)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "lee",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "park",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "park",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "park",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "park",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "park",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "park",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "kim",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "kim",false)
         )
         selectDataList.add(
             PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "이성은",false)
+                "kim",false)
         )
         sendSelectPersonRecyclerViewAdapter = SendSelectPersonRecyclerViewAdapter(context!!, selectDataList)
         rv_send_select_person.adapter = sendSelectPersonRecyclerViewAdapter
