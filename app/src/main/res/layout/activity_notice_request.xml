@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+/>
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+        >
+            <ImageView
+                    android:id="@+id/btn_notice_back"
+                    android:layout_width="34dp"
+                       android:layout_height="34dp"
+                       android:src="@drawable/btn_arrow_back"
+                       android:layout_marginRight="15dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="알림"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/noto_sans_kr_medium_hestia"
+            />
+            <ImageView
+                android:id="@+id/btn_main_detail_edit_done"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="270dp"
+                android:src="@drawable/outline_done_black_18dp" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_notice_tabbar"
+            android:layout_width="350dp"
+        android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="50dp"/>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_notice"
+        android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+</LinearLayout>

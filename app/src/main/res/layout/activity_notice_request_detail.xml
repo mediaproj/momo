@@ -1,0 +1,114 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              xmlns:tools="http://schemas.android.com/tools"
+
+              android:layout_width="match_parent"
+
+              android:layout_height="match_parent"
+
+              android:orientation="vertical"
+
+>
+    <RelativeLayout
+            android:id="@+id/rl_notice_detail_edit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+        <ImageView
+                android:id="@+id/btn_notice_detail_back"
+                android:src="@drawable/outline_clear_black_18dp"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"/>
+
+
+        <ImageView
+                android:id="@+id/btn_notice_detail_done"
+                android:src="@drawable/outline_done_black_18dp"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:layout_marginTop="30dp"
+                      android:layout_marginLeft="70dp">
+            <TextView
+                    android:id="@+id/tv_notice_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_medium_hestia"
+
+                    android:text="Title"
+                    android:textColor="#000000"
+                    android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:layout_marginTop="30dp"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="30dp">
+            <ImageView
+                    android:id="@+id/iv_notice_detail_date"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/clock_time_5025"/>
+            <TextView
+                    android:id="@+id/tv_notice_detail_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_medium_hestia"
+                    android:text="날짜"
+                    android:layout_gravity="center"
+
+                    android:textSize="20dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="30dp">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_select_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                android:layout_toEndOf="@+id/rv_select_time"
+                      android:layout_marginTop="30dp"
+                      android:layout_marginLeft="25dp">
+            <ImageView
+
+                    android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:layout_marginRight="16dp"
+                       android:src="@drawable/mapmarker_120273"
+                       android:id="@+id/iv_notice_detail_edit_place"/>
+
+            <TextView
+
+                    android:id="@+id/tv_notice_detail_edit_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_kr_medium_hestia"
+                    android:text="장소"
+                    android:textSize="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

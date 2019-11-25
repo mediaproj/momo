@@ -30,28 +30,28 @@ class NoticeRequestFragment : Fragment() {
         var dataList: ArrayList<NoticeData> = ArrayList()
         dataList.add(
             NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 8월 12일")
+                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
         )
         dataList.add(
             NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 8월 12일")
+                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
         )
         dataList.add(
             NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 8월 12일")
+                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
         )
 
         dataList.add(
             NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 8월 12일")
+                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
         )
         dataList.add(
             NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 8월 12일")
+                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
         )
         dataList.add(
             NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 8월 12일")
+                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
         )
 
 

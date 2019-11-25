@@ -30,29 +30,18 @@ class SendSelectGroupFragment  : Fragment() {
         /* 추후 서버와의 통신으로 대체할 부분입니다 */
         var selectDataList: ArrayList<GroupSelectData> = ArrayList()
         selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
+            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","수원팸")
         )
         selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
+            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","가족")
         )
         selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
+            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","학교")
         )
         selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
+            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","동아리")
         )
-        selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
-        )
-        selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
-        )
-        selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
-        )
-        selectDataList.add(
-            GroupSelectData("https://cdn.icon-icons.com/icons2/1875/PNG/128/users_120204.png","이성은")
-        )
+
 
 
         sendSelectGroupRecyclerViewAdapter = SendSelectGroupRecyclerViewAdapter(context!!, selectDataList)
