@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.mediaproj.momo.R
+import com.mediaproj.momo.ui.chat.ChattingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_send_select_person.*
 import kotlinx.android.synthetic.main.fragment_send_select_person.*
@@ -18,6 +19,16 @@ class SendSelectPersonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_select_person)
         // configureTitleBar()
+
+
+        btn_main_detail_edit_done.setOnClickListener{
+
+                val intent = Intent(this, ChattingActivity::class.java)
+                startActivity(intent)
+
+        }
+
+
         configureMainTab()
 //        img_toolbar_main_action.setOnClickListener{
 //            if(SharedPreferenceController.getUserID(this).isEmpty()){

@@ -43,7 +43,7 @@ public class RoomActivity extends AppCompatActivity {
 
         getRoomList();
     }
-
+//따라해보기
     void getRoomList() {
         Call<List<Room>> call = RetrofitClient.getApiService().getUserSchedule(MomoUtil.getUserData().getEmail());
         call.enqueue(new Callback<List<Room>>() {

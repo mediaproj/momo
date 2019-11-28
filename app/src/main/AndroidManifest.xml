@@ -10,21 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.main.MainActivity"/>
-        <activity android:name=".ui.main.SendSelectPersonActivity"/>
-            <activity android:name=".ui.main.NoticeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-           <activity android:name=".ui.main.InformationActivity"/>
+        <activity android:name=".ui.main.SendSelectPersonActivity"/>
+            <activity android:name=".ui.main.NoticeActivity"/>
+
+           <activity android:name=".ui.main.InformationActivity">
+               <intent-filter>
+                   <action android:name="android.intent.action.MAIN" />
+
+                   <category android:name="android.intent.category.LAUNCHER" />
+               </intent-filter>
+           </activity>
 
         <activity android:name=".ui.chat.RoomActivity"></activity>
         <activity android:name=".ui.chat.ChattingActivity"></activity>
         <activity android:name=".ui.login.LoginActivity"/>
 
-        <activity android:name=".ui.signup.SignUpActivity"></activity>
+
+
+        <activity android:name=".ui.signup.SignUpActivity"/>
     </application>
 
 </manifest>

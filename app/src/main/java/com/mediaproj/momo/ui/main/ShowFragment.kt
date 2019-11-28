@@ -29,38 +29,38 @@ class ShowFragment : Fragment(){
         var datalist: ArrayList<MainListData> = ArrayList()
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "터미네이터", "30%"
+                "http://ticketimage.interpark.com/Play/image/large/19/19015278_p.gif",
+                "엘리펀트송", "8.2%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=136873",
-                "겨울왕국", "20%"
+                "http://ticketimage.interpark.com/Play/image/large/17/17010357_p.gif",
+                "옥탑방고양이", "8.0%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "블랙머니", "10%"
+                "http://ticketimage.interpark.com/Play/image/large/18/18010868_p.gif",
+                "오백에삼십", "7.1%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화4", "5%"
+                "http://ticketimage.interpark.com/Play/image/large/19/19011560_p.gif",
+                "작업의정석", "3.7%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화5", "3%"
+                "http://ticketimage.interpark.com/Play/image/large/15/15012361_p.gif",
+                "쉬어 매드니스", "3.4%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화6", "2%"
+                "http://ticketimage.interpark.com/Play/image/large/19/19015663_p.gif",
+                "그대를 사랑", "2.6%"
             ))
         mainRecyclerViewAdapter = MainRecyclerViewAdapter(context!!, datalist)
         rv_main_show.adapter = mainRecyclerViewAdapter

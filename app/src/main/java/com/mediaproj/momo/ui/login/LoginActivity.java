@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
     void login() {
         LoginData loginData = new LoginData(etEmail.getText().toString().trim(), etPassword.getText().toString().trim());
-
+//post
         Call<UserData> call = RetrofitClient.getApiService().login(loginData);
         call.enqueue(new Callback<UserData>() {
             @Override

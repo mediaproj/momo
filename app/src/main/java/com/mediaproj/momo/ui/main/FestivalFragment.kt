@@ -30,39 +30,40 @@ class FestivalFragment : Fragment() {
         var datalist: ArrayList<MainListData> = ArrayList()
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "터미네이터", "30%"
+                "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=d736c69e-ba7f-4339-838c-f83ad41040e8&thumb",
+                "복정동 빛축제", "#이색 #불빛 #축제"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=136873",
-                "겨울왕국", "20%"
+                "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=70362baf-2ab2-42a0-9cfa-1ac848e0edad&thumb"
+                        ,"서울디자인\n페스티벌", "#축제"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "블랙머니", "10%"
-            )
-        )
-        datalist.add(
-            MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화4", "5%"
-            )
-        )
-        datalist.add(
-            MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화5", "3%"
-            )
-        )
-        datalist.add(
-            MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화6", "2%"
+                "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=5d5213bd-1fe4-40bc-b7af-a0e90e73a059&thumb",
+                "롯데월드", "#나들이 #축제"
             ))
+        datalist.add(
+            MainListData(
+                "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=ef4fe9a4-afa2-4bc6-97e2-cec199f22496&thumb",
+                        "오색별빛정원", "#겨울축제 #불빛"
+            )
+        )
+        datalist.add(
+            MainListData(
+                "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=eb83d5e4-9588-43a6-a5b6-8f00d6b783ca&thumb"
+                        ,"산타런", "#관광"
+            )
+        )
+        datalist.add(
+            MainListData(
+                "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=e9de8892-b087-4297-9fd1-405e46d15cd5&thumb",
+                        "크리스마스", "#거창 #불빛"
+            )
+        )
+
         mainRecyclerViewAdapter = MainRecyclerViewAdapter(context!!, datalist)
         rv_main_festival.adapter = mainRecyclerViewAdapter
         rv_main_festival.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

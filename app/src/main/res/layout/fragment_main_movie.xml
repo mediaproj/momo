@@ -2,13 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_main_recommend_img"
-        android:layout_width="match_parent"
-        android:layout_height="250dp">
 
-    </androidx.recyclerview.widget.RecyclerView>
 <!--        android:layout_height="200dp"/>-->
 <!--<ImageView-->
 <!--    android:id="@+id/iv_main_recommend"-->
@@ -19,6 +15,13 @@
 <!--    />-->
 
 
+    <ImageView
+        android:id="@+id/iv_main_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/maxresdefault"
+        android:scaleType="fitXY"
+        />
 
     <me.relex.circleindicator.CircleIndicator2
         android:id="@+id/rvMainMdReCoIndicator"
@@ -35,14 +38,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_main_recommend_img" />
+        app:layout_constraintTop_toBottomOf="@id/iv_main_recommend" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="7dp"
+        android:layout_below="@+id/iv_main_recommend"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/noto_sans_kr_bold_hestia"
+        android:text="오늘 이 영화는 어때요?"
+        android:textSize="20dp"
+        android:textColor="@color/black" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main_movie"
-        android:layout_marginTop="80dp"
-android:background="@drawable/background_rounding"
-        android:layout_below="@+id/rv_main_recommend_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_below="@+id/iv_main_recommend"
+        android:layout_marginTop="86dp"
+         />
 </RelativeLayout>

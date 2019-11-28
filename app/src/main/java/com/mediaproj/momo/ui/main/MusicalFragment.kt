@@ -30,39 +30,40 @@ class MusicalFragment: Fragment() {
         var datalist: ArrayList<MainListData> = ArrayList()
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "터미네이터", "30%"
+               "http://ticketimage.interpark.com/Play/image/large/19/19011175_p.gif",
+                "미스터쇼", "14.1%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=136873",
-                "겨울왕국", "20%"
+                "http://ticketimage.interpark.com/Play/image/large/19/19013796_p.gif",
+                "레베카", "10.7%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "블랙머니", "10%"
+                "http://ticketimage.interpark.com/Play/image/large/19/19011808_p.gif",
+                "아이다", "10.3%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화4", "5%"
+               "http://ticketimage.interpark.com/Play/image/large/19/19014356_p.gif",
+                "경종수정실록", "9.7%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화5", "3%"
+                "http://ticketimage.interpark.com/Play/image/large/19/19015390_p.gif"
+                        ,"여신님이 \n보고 계셔", "9.2%"
             )
         )
         datalist.add(
             MainListData(
-                "https://movie.naver.com/movie/bi/mi/basic.nhn?code=167605",
-                "영화6", "2%"
-            ))
+                "http://ticketimage.interpark.com/Play/image/large/19/19011716_p.gif",
+                "스위니토드", "4.0%"
+            )
+        )
         mainRecyclerViewAdapter = MainRecyclerViewAdapter(context!!, datalist)
         rv_main_musical.adapter = mainRecyclerViewAdapter
         rv_main_musical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

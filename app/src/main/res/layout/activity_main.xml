@@ -6,63 +6,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top_constraintLayout"
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/main_toolbar">
+    </include>
+    <View
+        android:id="@+id/v_bar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/lightseagreen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/alarm"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/notice_btn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="92dp"
-            android:fontFamily="@font/noto_sans_kr_medium_hestia"
-            android:gravity="center_horizontal"
-            android:includeFontPadding="false"
-            android:lineSpacingExtra="6sp"
-            android:text="MOMO"
-            android:textColor="#ffffff"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.694"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/tabbar"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/tabbar_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_height="3dp"
+        android:background="@color/teal"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title">
+    </View>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_main_tabbar"
         android:background="@color/lightseagreen"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-
 
 
     <androidx.viewpager.widget.ViewPager

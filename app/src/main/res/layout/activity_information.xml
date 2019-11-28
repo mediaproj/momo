@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#66000000"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -28,6 +29,12 @@
             android:layout_width="24dp"
             android:layout_height="24dp"/>
     </RelativeLayout>
+    <View
+        android:id="@+id/v_bar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/teal"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
 
     <TextView
         android:id="@+id/tv_main_information_title"
@@ -39,7 +46,6 @@
         android:layout_height="wrap_content"
         android:text="1.겨울왕국2"
         android:fontFamily="@font/noto_sans_kr_bold_hestia"
-        android:layout_marginLeft="16dp"
         android:textColor="@color/lightseagreen"
         android:textSize="22sp"
         android:includeFontPadding="false"/>
@@ -47,7 +53,7 @@
     <TextView
         android:id="@+id/tv_main_information_vote_rate"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="6dp"
         android:layout_below="@+id/tv_main_information_title"
         android:layout_width="252dp"
         android:layout_height="21dp"
@@ -59,41 +65,185 @@
         />
 
     <ImageView
-        android:background="@drawable/background_rounding"
+        android:background="@drawable/round_corner_gray"
         android:id="@+id/iv_main_information"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_below="@+id/rl_main_information_toolbar"
         android:layout_centerInParent="true"
-        android:layout_marginTop="163dp"
+        android:layout_marginTop="123dp"
         android:scaleType="fitXY"
         android:src="@drawable/maxresdefault" />
-    <RelativeLayout
+
+<!--    <RelativeLayout-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="100dp"-->
+<!--        android:layout_width="360dp" android:layout_height="96dp">-->
+
+<!--        <ImageView-->
+<!--            android:layout_marginStart="49dp"-->
+<!--            android:id="@+id/iv_main_information_reserve"-->
+<!--            android:src="@drawable/btn_genre_active"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_width="146dp"-->
+<!--            android:layout_height="80dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_main_information_reserve"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:lineSpacingExtra="5sp"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:fontFamily="@font/noto_sans_kr_medium_hestia"-->
+<!--            android:text="예약하기"-->
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:layout_width="360dp" android:layout_height="96dp">
+        android:background="@drawable/sliding_handle"
+        android:elevation="30dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="56dp"
+        android:shadowColor="#29000000"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="130dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="45dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/round_corner_gray_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_marginStart="49dp"
-            android:id="@+id/iv_main_information_reserve"
-            android:src="@drawable/btn_genre_active"
-            android:layout_centerInParent="true"
-            android:layout_width="146dp"
-            android:layout_height="80dp"/>
+            android:id="@+id/title_logo"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/app_icon"
+            app:layout_behavior="@string/bottom_sheet_behavior"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_main_information_reserve"
+
+        <EditText
+            android:id="@+id/edit_title_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="20sp"
-            android:textColor="#ffffff"
-            android:lineSpacingExtra="5sp"
-            android:gravity="center_horizontal"
-            android:fontFamily="@font/noto_sans_kr_medium_hestia"
-            android:text="예약하기"
-            />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:hint="채팅방 이름"
+            android:lineSpacingExtra="3sp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/title_logo"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_select"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_logo" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/noto_sans_kr_medium_hestia"
+            android:text="date"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_date_select"
+            app:layout_constraintTop_toBottomOf="@+id/edit_title_name" />
+
+        <ImageView
+            android:id="@+id/iv_place_select"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/mapmarker_120273"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_date_select" />
+
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/noto_sans_kr_medium_hestia"
+            android:text="place"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_place_select"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="244dp"
+            android:fontFamily="@font/noto_sans_kr_bold_hestia"
+            android:text="더 보기"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="244dp"
+            android:fontFamily="@font/noto_sans_kr_bold_hestia"
+            android:text="인원 선택"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--        <Spinner-->
+        <!--            android:id="@+id/spinner"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="131dp"-->
+        <!--            android:layout_marginEnd="32dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="400dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

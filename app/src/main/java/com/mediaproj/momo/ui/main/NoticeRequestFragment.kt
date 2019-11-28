@@ -29,31 +29,30 @@ class NoticeRequestFragment : Fragment() {
         /* 추후 서버와의 통신으로 대체할 부분입니다 */
         var dataList: ArrayList<NoticeData> = ArrayList()
         dataList.add(
-            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
+            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김정민님으로부터 요청이 왔습니다","2019년 12월 1일")
         )
         dataList.add(
-            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
+            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "이성은님으로부터 요청이 왔습니다","2019년 11월 30일")
         )
         dataList.add(
-            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
+            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "박준서님으로부터 요청이 왔습니다","2019년 11월 29일")
         )
 
         dataList.add(
-            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
+            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "양어진님으로부터 요청이 왔습니다","2019년 11월 28일")
         )
         dataList.add(
-            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
+            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김정민님으로부터 요청이 왔습니다","2019년 11월 24일")
         )
         dataList.add(
-            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "oo님으로부터 요청이 왔습니다","2019년 12월 12일")
+            NoticeData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "박준서님으로부터 요청이 왔습니다","2019년 11월 21일")
         )
-
 
         noticeRecyclerViewAdapter = NoticeRecyclerViewAdapter(context!!, dataList)
         rv_notice_request_get.adapter = noticeRecyclerViewAdapter

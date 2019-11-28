@@ -9,6 +9,7 @@ import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.mediaproj.momo.R
 import kotlinx.android.synthetic.main.activity_notice_request.*
+import kotlinx.android.synthetic.main.fragment_notice_request_get.*
 
 class NoticeActivity : AppCompatActivity() {
 
@@ -40,10 +41,19 @@ class NoticeActivity : AppCompatActivity() {
 //            img_toolbar_main_action.isSelected = true
 //        }
 //    }
-        btn_notice_back.setOnClickListener {
+        btn_back.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        btn_done.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        rv_notice_request_get.setOnClickListener{
+            val intent = Intent(this, NoticeRequestActivity::class.java)
+            startActivity(intent)
+        }
+
     }
     private fun configureMainTab() {
         vp_notice.adapter = NoticePageAdapter(supportFragmentManager, 2)
