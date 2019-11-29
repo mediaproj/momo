@@ -9,9 +9,8 @@ import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.mediaproj.momo.R
 import com.mediaproj.momo.ui.chat.ChattingActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.mediaproj.momo.ui.chat.RoomActivity
 import kotlinx.android.synthetic.main.activity_send_select_person.*
-import kotlinx.android.synthetic.main.fragment_send_select_person.*
 
 class SendSelectPersonActivity : AppCompatActivity() {
 
@@ -20,12 +19,14 @@ class SendSelectPersonActivity : AppCompatActivity() {
         setContentView(R.layout.activity_send_select_person)
         // configureTitleBar()
 
+        img_send_select_person_btn_back.setOnClickListener{
+            val intent = Intent(this, InformationActivity::class.java)
+            startActivity(intent)
+        }
 
-        btn_main_detail_edit_done.setOnClickListener{
-
-                val intent = Intent(this, ChattingActivity::class.java)
+        img_send_select_person_btn_done.setOnClickListener{
+                val intent = Intent(this, RoomActivity::class.java)
                 startActivity(intent)
-
         }
 
 
