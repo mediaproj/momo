@@ -4,8 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
->
+        android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
@@ -39,6 +38,12 @@
                 android:src="@drawable/outline_done_black_18dp" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+        <View
+            android:id="@+id/v_bar"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/teal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_send_select_person_tabbar"

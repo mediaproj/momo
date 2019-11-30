@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.mediaproj.momo.R
 import com.mediaproj.momo.data.MainImgData
 import com.mediaproj.momo.data.MainListData
 import kotlinx.android.synthetic.main.fragment_main_movie.*
+import me.relex.circleindicator.CircleIndicator2
 
 
 class MovieFragment : Fragment() {
@@ -28,24 +30,24 @@ class MovieFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_main_movie, container, false)
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//// rv_main_recommend_img 리사이클러뷰 Circle Indicator 설정
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+
+        // rv_main_recommend_img 리사이클러뷰 Circle Indicator 설정, rv > img로 변경
 //        val pagerSnapHelper = PagerSnapHelper()
 //        pagerSnapHelper.attachToRecyclerView(rv_main_recommend_img)
 //
 //        val rvMainMdReCoIndicator: CircleIndicator2 =
 //            rvMainMdReCoIndicator
 //        rvMainMdReCoIndicator.attachToRecyclerView(rv_main_recommend_img, pagerSnapHelper)
-//
-//        // indicator와 리사이클러뷰 연결
-//        mainRecommendRecyclerViewAdapter.registerAdapterDataObserver(rvMainMdReCoIndicator.adapterDataObserver)
-//
-//
-//    }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
 
-    rv_main_movie.setOnClickListener{
+        // indicator와 리사이클러뷰 연결
+//        mainRecommendRecyclerViewAdapter.registerAdapterDataObserver(rvMainMdReCoIndicator.adapterDataObserver)
+
+            //fragment에서 activity로 이동 해결x
+        rv_main_movie.setOnClickListener{
 
 //        activity?.let{
 //            val intent = Intent (it,InformationActivity::class.java)

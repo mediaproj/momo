@@ -7,6 +7,6 @@
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_send_select_person"
             android:layout_width="match_parent"
-            android:layout_height="455dp"/>
+            android:layout_height="match_parent"/>
 
 </LinearLayout>

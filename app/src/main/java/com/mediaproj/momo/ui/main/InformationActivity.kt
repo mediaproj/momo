@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.mediaproj.momo.R
@@ -71,6 +72,11 @@ class InformationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_information)
 
 
+
+
+
+
+
         //텍스트뷰 2개 연결
 
         mTxtDate = findViewById<View>(R.id.txtdate) as TextView
@@ -103,19 +109,19 @@ class InformationActivity : AppCompatActivity() {
         val btnchangeplace = findViewById(R.id.btnchangeplace) as Button
 
 //
-        if (btnchangeplace != null)
-            btnchangeplace.setOnClickListener(View.OnClickListener {
-                val i = Intent(this@InformationActivity, WebViewActivity::class.java)
-                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY)
-            })
+//        if (btnchangeplace != null)
+//            btnchangeplace.setOnClickListener(View.OnClickListener {
+//                val i = Intent(this@InformationActivity, WebViewActivity::class.java)
+//                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY)
+//            })
 
 
 
 
-            tv_input_select_person.setOnClickListener{
-                val intent = Intent(this, SendSelectPersonActivity::class.java)
-                startActivity(intent)
-            }
+//            tv_input_select_person.setOnClickListener{
+//                val intent = Intent(this, SendSelectPersonActivity::class.java)
+//                startActivity(intent)
+//            }
         }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 

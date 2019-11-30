@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import com.mediaproj.momo.R
 import com.mediaproj.momo.ui.chat.RoomActivity
+import kotlinx.android.synthetic.main.activity_information.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_toolbar.*
 
@@ -19,10 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        alarm.setOnClickListener(){
-            val intent = Intent(this, NoticeActivity::class.java)
-            startActivity(intent)
-        }
 
         //map 아직
 //        map.setOnClickListener(){
@@ -37,10 +34,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, InformationActivity::class.java)
             startActivity(intent)
         }
+        alarm.setOnClickListener(){
+            val intent = Intent(this, NoticeActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
-       // iv_main_list.setBackground(drawable);
+        // iv_main_list.setBackground(drawable);
        // iv_main_list.setClipToOutline(true);
 
 

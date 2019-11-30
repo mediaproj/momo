@@ -38,49 +38,62 @@ class SendSelectPersonFragment : Fragment() {
         /* 추후 서버와의 통신으로 대체할 부분입니다 */
         var selectDataList: ArrayList<PersonSelectData> = ArrayList()
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "lee",true)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "강도희",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "park",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "강병현",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "kim",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "권영일",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "sin",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김도형",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "lee",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김동해",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "kim",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김민섭",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "park",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김민주",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "sin",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김성헌",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "sin",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김영훈",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "kim",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김정민",false)
         )
         selectDataList.add(
-            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAukpV31V9zNtu0CQ0QOlJ_aelKU0A6sM-kokoqk6CQSHKPlMuRA",
-                "kim",false)
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김정혜",false)
         )
+        selectDataList.add(
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김지은",false)
+        )
+        selectDataList.add(
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김채은",false)
+        )
+        selectDataList.add(
+            PersonSelectData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGF_XYOWaJbpdFzJRBkS-FWLYz8uO82LUPbaVsF_q4t-hQSPK1cg&s",
+                "김혜령",false)
+        )
+
         sendSelectPersonRecyclerViewAdapter = SendSelectPersonRecyclerViewAdapter(context!!, selectDataList)
         rv_send_select_person.adapter = sendSelectPersonRecyclerViewAdapter
         rv_send_select_person.layoutManager = LinearLayoutManager(context!!, LinearLayoutManager.VERTICAL,false)

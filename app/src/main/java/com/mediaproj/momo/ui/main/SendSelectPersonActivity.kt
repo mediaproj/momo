@@ -25,7 +25,7 @@ class SendSelectPersonActivity : AppCompatActivity() {
         }
 
         img_send_select_person_btn_done.setOnClickListener{
-                val intent = Intent(this, RoomActivity::class.java)
+                val intent = Intent(this, ChattingActivity::class.java)
                 startActivity(intent)
         }
 

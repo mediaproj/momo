@@ -21,25 +21,19 @@
             android:layout_width="wrap_content"
             android:layout_height="27dp"/>
 
-        <ImageView
-            android:layout_marginRight="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/btn_back"
-            android:layout_width="24dp"
-            android:layout_height="24dp"/>
+
     </RelativeLayout>
     <View
         android:id="@+id/v_bar"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/teal"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
+        android:layout_below="@+id/rl_main_information_toolbar"/>
 
     <TextView
         android:id="@+id/tv_main_information_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_below="@+id/rl_main_information_toolbar"
         android:layout_marginHorizontal="24dp"
         android:layout_width="wrap_content"
@@ -57,11 +51,12 @@
         android:layout_below="@+id/tv_main_information_title"
         android:layout_width="252dp"
         android:layout_height="21dp"
+        android:fontFamily="@font/noto_sans_kr_medium_hestia"
         android:textSize="16sp"
-        android:textColor="#a1a1a1"
+        android:textColor="#cecece"
         android:lineSpacingExtra="8sp"
         android:gravity="center_horizontal"
-        android:text="예매율 30%"
+        android:text="예매율 60%"
         />
 
     <ImageView
@@ -69,9 +64,9 @@
         android:id="@+id/iv_main_information"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_below="@+id/rl_main_information_toolbar"
+        android:layout_below="@+id/tv_main_information_vote_rate"
         android:layout_centerInParent="true"
-        android:layout_marginTop="123dp"
+        android:layout_marginTop="23dp"
         android:scaleType="fitXY"
         android:src="@drawable/maxresdefault" />
 
@@ -114,7 +109,7 @@
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:paddingBottom="56dp"
+        android:paddingBottom="16dp"
         android:shadowColor="#29000000"
         app:behavior_hideable="false"
         app:behavior_peekHeight="130dp"
@@ -162,6 +157,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="35dp"
+            android:onClick="mOnClick"
             android:background="@drawable/calendar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_logo" />
@@ -170,7 +166,7 @@
             android:id="@+id/txtdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="36dp"
             android:layout_marginTop="36dp"
             android:fontFamily="@font/noto_sans_kr_medium_hestia"
             android:text="date"
@@ -185,6 +181,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
+            android:onClick="mOnClick"
             android:background="@drawable/clock_time_5025"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnchangedate" />

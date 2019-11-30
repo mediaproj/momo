@@ -49,10 +49,10 @@ class NoticeActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        rv_notice_request_get.setOnClickListener{
-            val intent = Intent(this, NoticeRequestActivity::class.java)
-            startActivity(intent)
-        }
+//        rv_notice_request_get.setOnClickListener{
+//            val intent = Intent(this, NoticeRequestActivity::class.java)
+//            startActivity(intent)
+//        }
 
     }
     private fun configureMainTab() {
