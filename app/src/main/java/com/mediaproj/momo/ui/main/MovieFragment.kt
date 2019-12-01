@@ -6,20 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.mediaproj.momo.R
 import com.mediaproj.momo.data.MainImgData
 import com.mediaproj.momo.data.MainListData
 import kotlinx.android.synthetic.main.fragment_main_movie.*
-import me.relex.circleindicator.CircleIndicator2
+import kotlinx.android.synthetic.main.main_toolbar.*
 
 
 class MovieFragment : Fragment() {
 
     lateinit var mainRecyclerViewAdapter: MainRecyclerViewAdapter
-    lateinit var mainRecommendRecyclerViewAdapter: MainRecommendRecyclerViewAdapter
+  //  lateinit var mainRecommendRecyclerViewAdapter: MainRecommendRecyclerViewAdapter
 
     private lateinit var rvMainRecommend: RecyclerView
     override fun onCreateView(
@@ -35,7 +35,9 @@ class MovieFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
 
-        // rv_main_recommend_img 리사이클러뷰 Circle Indicator 설정, rv > img로 변경
+
+
+            // rv_main_recommend_img 리사이클러뷰 Circle Indicator 설정, rv > img로 변경
 //        val pagerSnapHelper = PagerSnapHelper()
 //        pagerSnapHelper.attachToRecyclerView(rv_main_recommend_img)
 //
@@ -142,7 +144,11 @@ class MovieFragment : Fragment() {
 //            rv_main_recommend_img.layoutManager =
 //                LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-
+//        AppCompatActivity을 사용하는 경우와 Activity을 사용하는 경우 2가지로 구분해서 만들었습니다.
+//        supportFragmentManager을 사용하여 replace를 통해 Fragment를 바로 등록하게 됩니다.
+//        vp_main_slider.adapter = SliderMainPagerAdapter(supportFragmentManager, 3)
+//        vp_main_slider.offscreenPageLimit = 2
+//        tl_main_indicator.setupWithViewPager(vp_main_slider)
 
         }
     }

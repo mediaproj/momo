@@ -21,11 +21,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        //map 아직
-//        map.setOnClickListener(){
-//            val intent = Intent(this, RoomActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        map.setOnClickListener(){
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
+        }
 
 
         //리사이클러뷰의 아이템을 클릭했을 때 액티비이 이동

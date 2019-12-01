@@ -55,14 +55,11 @@ class InformationActivity : AppCompatActivity() {
             // TODO Auto-generated method stub
 
             //사용자가 입력한 값을 가져온뒤
-
             mHour = hourOfDay
-
             mMinute = minute
 
 
             //텍스트뷰의 값을 업데이트함
-
             UpdateNow()
         }
 
@@ -72,15 +69,9 @@ class InformationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_information)
 
 
-
-
-
-
-
         //텍스트뷰 2개 연결
 
         mTxtDate = findViewById<View>(R.id.txtdate) as TextView
-
         mTxtTime = findViewById<View>(R.id.txttime) as TextView
 
 
@@ -89,39 +80,32 @@ class InformationActivity : AppCompatActivity() {
         val cal = GregorianCalendar()
 
         mYear = cal.get(Calendar.YEAR)
-
         mMonth = cal.get(Calendar.MONTH)
-
         mDay = cal.get(Calendar.DAY_OF_MONTH)
-
         mHour = cal.get(Calendar.HOUR_OF_DAY)
-
         mMinute = cal.get(Calendar.MINUTE)
 
-
-
         UpdateNow()//화면에 텍스트뷰에 업데이트 해줌.
-
 
 
         et_address = findViewById(R.id.txtplace) as EditText
 
         val btnchangeplace = findViewById(R.id.btnchangeplace) as Button
 
-//
-//        if (btnchangeplace != null)
-//            btnchangeplace.setOnClickListener(View.OnClickListener {
-//                val i = Intent(this@InformationActivity, WebViewActivity::class.java)
-//                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY)
-//            })
+
+        if (btnchangeplace != null)
+            btnchangeplace.setOnClickListener(View.OnClickListener {
+                val i = Intent(this@InformationActivity, WebViewActivity::class.java)
+                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY)
+            })
 
 
 
 
-//            tv_input_select_person.setOnClickListener{
-//                val intent = Intent(this, SendSelectPersonActivity::class.java)
-//                startActivity(intent)
-//            }
+            tv_input_select_person.setOnClickListener{
+                val intent = Intent(this, SendSelectPersonActivity::class.java)
+                startActivity(intent)
+            }
         }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 

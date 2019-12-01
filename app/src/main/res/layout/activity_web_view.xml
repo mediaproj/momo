@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.WebViewActivity">
+    tools:context="ui.main.WebViewActivity">
 
-    <WebView
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/main_toolbar">
+    </include>
+    <View
+        android:id="@+id/v_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="3dp"
+        android:background="@color/teal"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar">
+    </View>
 
-</android.support.constraint.ConstraintLayout>
+<fragment
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:id="@+id/map"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

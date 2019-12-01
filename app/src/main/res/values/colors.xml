@@ -5,6 +5,7 @@
     <color name="colorAccent">#00FA9A</color>
     <color name="white">#FFFFFF</color>
     <color name="gray">#eeeeee</color>
+    <color name="DarkGray">#aaaaaa</color>
     <color name="black">#000000</color>
 
     <color name="colorPrimaryYellow">#FFD63F</color>
