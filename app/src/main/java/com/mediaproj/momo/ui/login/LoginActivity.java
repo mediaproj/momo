@@ -17,6 +17,7 @@ import com.mediaproj.momo.data.UserData;
 import com.mediaproj.momo.global.MomoUtil;
 import com.mediaproj.momo.global.Retrofit.RetrofitClient;
 import com.mediaproj.momo.ui.chat.RoomActivity;
+import com.mediaproj.momo.ui.main.MainActivity;
 import com.mediaproj.momo.ui.signup.SignUpActivity;
 
 import retrofit2.Call;
@@ -94,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         MomoUtil.setUserData(userData);
         MomoUtil.showMessage(LoginActivity.this, String.format(getString(R.string.login_success), userData.getName()));
 
-        Intent intent = new Intent(LoginActivity.this, RoomActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
 
         finish();

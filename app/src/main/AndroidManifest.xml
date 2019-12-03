@@ -13,15 +13,20 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyClBtgTdnXBz1YlPAYhiZtKqswkIQGIJi8"/>
-        <activity android:name=".ui.main.TutorialActivity"/>
-        <activity android:name=".ui.main.MainActivity"/>
-        <activity android:name=".ui.main.WebViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--        <activity android:name="ui.main.SplashActivity"-->
+<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.main.TutorialActivity"/>
+
+        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.main.WebViewActivity"/>
+        <activity android:name=".ui.main.MapsActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
 
         <activity android:name=".ui.main.SendSelectPersonActivity"/>

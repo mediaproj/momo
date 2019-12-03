@@ -3,16 +3,15 @@ package com.mediaproj.momo.ui.main
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.RelativeLayout
+import androidx.appcompat.app.AppCompatActivity
 import com.mediaproj.momo.R
-import com.mediaproj.momo.ui.chat.RoomActivity
-import kotlinx.android.synthetic.main.activity_information.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_toolbar.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,19 +20,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+//        val intent = Intent(this, SplashActivity::class.java)
+//        startActivity(intent)
 
-        map.setOnClickListener(){
+
+        map.setOnClickListener{
             val intent = Intent(this, WebViewActivity::class.java)
             startActivity(intent)
         }
 
-
-        //리사이클러뷰의 아이템을 클릭했을 때 액티비이 이동
-
-        vp_information.setOnClickListener{
+        main_name.setOnClickListener{
             val intent = Intent(this, InformationActivity::class.java)
             startActivity(intent)
         }
+        //리사이클러뷰의 아이템을 클릭했을 때 액티비이 이동
+
+//        vp_information.setOnClickListener{
+//            val intent = Intent(this, InformationActivity::class.java)
+//            startActivity(intent)
+//        }
         alarm.setOnClickListener(){
             val intent = Intent(this, NoticeActivity::class.java)
             startActivity(intent)
