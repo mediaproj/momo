@@ -125,8 +125,7 @@ public class RoomActivity extends AppCompatActivity {
 
         void setUi() {
             tvTitle.setText(room.getTitle());
-            tvEnabled.setText(room.isEnable() ? getString(R.string.enabled) : getString(R.string.disabled));
-            tvEnabled.setTextColor(room.isEnable() ? Color.BLUE : Color.RED);
+            tvEnabled.setText("3명");
         }
     }
 }
